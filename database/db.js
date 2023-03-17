@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require("mysql");
 
 const database = mysql.createConnection({
     host: "localhost",
@@ -9,10 +9,10 @@ const database = mysql.createConnection({
 
 database.connect((err) => {
   if (err) {
-    console.error('Erro ao conectar ao banco de dados: ' + err.stack);
+    console.error("Erro ao conectar ao banco de dados: " + err.stack);
     return;
   }
-  console.log('Conexão estabelecida com sucesso ao banco de dados.');
+  console.log("Conexão estabelecida com sucesso ao banco de dados.");
 });
 
 
