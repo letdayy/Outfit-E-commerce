@@ -3,7 +3,7 @@ const db = require("../database/db");
 const router = express.Router();
 
 router.get("/", (_req, res) => {
-  const q = "SELECT * FROM products";
+  const q = "SELECT * FROM user";
   db.query(q, (err, data) => {
     if (err) return res.json(err);
     return res.json(data);
@@ -11,18 +11,18 @@ router.get("/", (_req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  const productsId = req.params.id;
+  const userId = req.params.id;
   const q =
-    "UPDATE products SET `name` = ?, `description`= ?, `retailValue`= ?, `wholesaleValue`= ? WHERE id = ?";
+    "UPDATE user SET `name` = ?, `hash`= ?, `salt`= ?, `isAdmin`= ? WHERE id = ?";
 
   const values = [
     req.body.name,
-    req.body.description,
-    req.body.retailValue,
-    req.body.wholesaleValue,
+    req.body.hash,
+    req.body.salt,
+    req.body.isAdmin,
   ];
 
-  db.query(q, [...values, productsId], (err) => {
+  db.query(q, [...values, userId], (err) => {
     if (err) return res.json(err);
     return res.json("atualizado com sucesso");
   });
@@ -30,12 +30,12 @@ router.put("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const q =
-    "INSERT INTO products (`name`, `description`, `retailValue`, `wholesaleValue`) VALUES (?)";
+    "INSERT INTO user (`name`, `hash`, `salt`, `isAdmin`) VALUES (?)";
   const values = [
     req.body.name,
-    req.body.description,
-    req.body.retailValue,
-    req.body.wholesaleValue,
+    req.body.hash,
+    req.body.salt,
+    req.body.isAdmin,
   ];
 
   db.query(q, [values], (err) => {
@@ -45,10 +45,10 @@ router.post("/", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  const productsId = req.params.id;
-  const q = "DELETE FROM products WHERE id = ?";
+  const userId = req.params.id;
+  const q = "DELETE FROM user WHERE id = ?";
 
-  db.query(q, [productsId], (err) => {
+  db.query(q, [userId], (err) => {
     if (err) return res.json(err);
     return res.json("Deletado com sucesso!");
   });
