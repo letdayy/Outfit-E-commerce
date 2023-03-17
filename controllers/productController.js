@@ -54,4 +54,18 @@ router.delete("/:id", (req, res) => {
   });
 });
 
+
+router.post("/:productId/category/:categoryId", (req, res) => {
+  const {productId, categoryId} = req.params;
+  const q = "INSERT INTO `product-category` (`id_product`, `id_category`) VALUES (?, ?)";
+
+  db.query(q,[productId, categoryId], (err) => {
+    if (err) return res.json(err);
+    return res.json("Associação criada com sucesso");
+  });
+
+});
+
+
+
 module.exports = router;

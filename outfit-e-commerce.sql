@@ -141,9 +141,18 @@ ALTER TABLE `user`
 --
 -- Limitadores para a tabela `category`
 --
-ALTER TABLE `category`
+/*ALTER TABLE `category`
   ADD CONSTRAINT `category_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`);
-COMMIT;
+COMMIT; */
+
+CREATE TABLE `product-category`(
+  `id` INT PRIMARY KEY NOT NULL,
+  `id_product` INT,
+  `id_category` INT,
+  FOREIGN KEY (`id_product`) REFERENCES `products` (`id`),
+  FOREIGN KEY (`id_category`) REFERENCES `category` (`id`)
+);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
