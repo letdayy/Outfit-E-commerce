@@ -1,0 +1,25 @@
+{
+  "name": "outfit-e-commerce",
+  "version": "1.0.0",
+  "description": "Sistema de gestão de produtos de um site de roupas.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letdayy/Outfit-E-commerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/letdayy/Outfit-E-commerce/issues"
+  },
+  "homepage": "https://github.com/letdayy/Outfit-E-commerce#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.21"
+  }
+}
