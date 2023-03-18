@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 - Git e Github
 - MySQL
 - Eslint
----
+
 &nbsp;
 ## ✅ Dependências
 Esse projeto utiliza as seguintes dependências do **Node.js** para seu pleno desenvolvimento:
@@ -28,7 +28,7 @@ Esse projeto utiliza as seguintes dependências do **Node.js** para seu pleno de
 - Express
 - Nodemon
 - mysql
----
+
 &nbsp;
 ## 📋 Modelagem do banco de dados
 &nbsp;
@@ -36,7 +36,7 @@ Esse projeto utiliza as seguintes dependências do **Node.js** para seu pleno de
 <p>O relacionamento entre o produto e a categoria é many to many, pois um produto pode ter mais de uma categoria e uma categoria pode ter nenhum ou vários produtos.</p>
 <p>O usuário seria utilizado para checar se a conta cadastrada é um administrador para validar o sistema e poder acessá-lo com todas as permissões de rota.</p>
 
----
+
 &nbsp;
 ## 📈 Como foi criado o Banco de dados
 para criar uma conexão com o banco de dados SQL foi utilizadas as seguintes ferramentas:
@@ -44,7 +44,7 @@ para criar uma conexão com o banco de dados SQL foi utilizadas as seguintes fer
 - Programa **Xampp** para hospedagem do servidor do banco de dados. [Baixe o programa por aqui!](https://www.apachefriends.org/pt_br/index.html)
 - Dentro do Xampp, foi utilizado o banco de dados **Mysql** e o servidor web **Apache**.
 
----
+
 &nbsp;
 ## 💻 Como rodar o projeto
 Para rodar o projeto localmente no seu computador, as etapas a seguir podem ser seguidas:
@@ -70,12 +70,12 @@ npm start
 ```
 8. acesse o servidor através da rota `http://localhost:8800`
 
----
+
 &nbsp;
 ## 📝 Documentação da API
 https://documenter.getpostman.com/view/22741061/2s93JxsMY1#bf599fb0-13fd-4cd1-bacb-7f64f7e00568
 
----
+
 &nbsp;
 ## 🖊️ Licença
 Este projeto está sob a Licença MIT. Veja o arquivo "LICENSE" para mais detalhes.
