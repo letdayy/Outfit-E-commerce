@@ -79,12 +79,15 @@ npm start
 
 &nbsp;
 ## 📝 Documentação da API
-https://documenter.getpostman.com/view/22741061/2s93JxsMY1#bf599fb0-13fd-4cd1-bacb-7f64f7e00568
+O link abaixo levará para a documentação de como usar a **API**: 
+
+&nbsp;
+[Clique aqui para ver a documentação online!](https://documenter.getpostman.com/view/22741061/2s93JxsMY1)
 
 
 &nbsp;
 ## 🖊️ Licença
-Este projeto está sob a Licença MIT. Veja o arquivo "LICENSE" para mais detalhes.
+Este projeto está sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 **Projeto feito por Letícia Dayane. Qualquer dúvida, Entre em contato pelo e-mail lcdayane49@gmail.com.**
