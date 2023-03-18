@@ -29,6 +29,7 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 Esse projeto utiliza as seguintes dependências do **Node.js** para seu pleno desenvolvimento:
 
 - Express
+- Express-validator
 - Nodemon
 - mysql
 
