@@ -2,7 +2,13 @@
 <p align="center">Este é um projeto back end simples que armazena informações sobre um e-commerce de roupas.</p>
 
 <p align="center"> 
-<a href="#-licença">Licença</a>
+ <a href="#%EF%B8%8F-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-documentação-da-api">Documentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-como-rodar-o-projeto">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-como-foi-criado-o-banco-de-dados">Database</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-modelagem-do-banco-de-dados">Modelagem</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-dependências">Dependências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+ <a href="#-tecnologias-utilizadas">Tecnologias</a>
 </p>
 
 <p align="center" name="shields"> 
