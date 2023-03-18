@@ -1,6 +1,7 @@
 const express = require("express");
 const db = require("../database/db");
 const router = express.Router();
+const Validator = require("../middleware/validator");
 
 router.get("/", (_req, res) => {
   const q = "SELECT * FROM category";
@@ -10,7 +11,7 @@ router.get("/", (_req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", Validator.validationCategory("update"), Validator.getValidationErrors, (req, res) => {
   const categoryId = req.params.id;
   const q =
     "UPDATE category SET `name` = ?, `description`= ? WHERE id = ?";
@@ -26,7 +27,7 @@ router.put("/:id", (req, res) => {
   });
 });
 
-router.post("/", (req, res) => {
+router.post("/", Validator.validationCategory("create"), Validator.getValidationErrors,  (req, res) => {
   const q =
     "INSERT INTO category (`name`, `description`) VALUES (?)";
   const values = [

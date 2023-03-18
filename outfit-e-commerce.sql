@@ -30,17 +30,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `description` varchar(300) NOT NULL,
-  `productId` int(11) DEFAULT NULL
+  `description` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `category`
 --
 
-INSERT INTO `category` (`id`, `name`, `description`, `productId`) VALUES
-(2, 'Jeans', 'roupas de tecido jeans', NULL),
-(3, 'testeeeee', 'fekfokdolfoorf', NULL);
+INSERT INTO `category` (`id`, `name`, `description`) VALUES
+(2, 'Jeans', 'roupas de tecido jeans'),
+(3, 'testeeeee', 'fekfokdolfoorf');
 
 -- --------------------------------------------------------
 
