@@ -1,6 +1,8 @@
 const express = require("express");
 const db = require("../database/db");
 const router = express.Router();
+const Validator = require("../middleware/validator");
+
 
 router.get("/", (_req, res) => {
   const q = "SELECT * FROM products";
@@ -10,7 +12,7 @@ router.get("/", (_req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", Validator.validationProduct("update"), Validator.getValidationErrors, (req, res) => {
   const productsId = req.params.id;
   const q =
     "UPDATE products SET `name` = ?, `description`= ?, `retailValue`= ?, `wholesaleValue`= ? WHERE id = ?";
@@ -28,7 +30,7 @@ router.put("/:id", (req, res) => {
   });
 });
 
-router.post("/", (req, res) => {
+router.post("/", Validator.validationProduct("create"), Validator.getValidationErrors, (req, res) => {
   const q =
     "INSERT INTO products (`name`, `description`, `retailValue`, `wholesaleValue`) VALUES (?)";
   const values = [
@@ -61,7 +63,7 @@ router.post("/:productId/category/:categoryId", (req, res) => {
 
   db.query(q,[productId, categoryId], (err) => {
     if (err) return res.json(err);
-    return res.json("Associação criada com sucesso");
+    return res.json("Associação criada com sucesso!");
   });
 
 });
