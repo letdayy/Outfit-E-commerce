@@ -11,9 +11,6 @@
  <a href="#-tecnologias-utilizadas">Tecnologias</a>
 </p>
 
-<p align="center" name="shields"> 
-</p>
-
 <img alt="Outfit-e-commerce" src=".github/Outfit-E-Commerce.png" width="100%">
 
 ---
